@@ -6,7 +6,7 @@ def main():
         "Draco": "Slytherin",
     }
     for student in students:
-        print(student, students[student])
+        print(student, students[student], sep=" lives in: ")
 
 
 if __name__ == "__main__":
