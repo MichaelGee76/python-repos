@@ -3,19 +3,49 @@ import random as ran
 
 def main():
     while True:
-        level = int(input("Level: "))
-        if level not in range(1, 4):
+        try:
+            level = int(input("Level: "))
+            if level not in range(1, 4):
+                continue
+            break
+        except ValueError:
             continue
-        break
 
+    is_correct = 0
     if level == 1:
         problems = create_math_problems(1)
     elif level == 2:
         problems = create_math_problems(2)
     elif level == 3:
         problems = create_math_problems(3)
+    for problem, result in problems.items():
 
-    print(problems[])
+        counter = 0
+        while counter < 3:
+            try:
+                answer = int(input(f"{problem} = "))
+                if answer != result:
+                    print("EEE")
+                    counter += 1
+                    continue
+                if answer == result:
+                    is_correct += 1
+                    break
+
+            except ValueError:
+                print("EEE")
+                counter += 1
+                continue
+
+        if counter == 3:
+            print(f"{problem} = {result}")
+
+    if is_correct > 5:
+        print(f"Congrats, you answered {is_correct} questions right!")
+    if is_correct <= 5:
+        print(f"Not bad, you answered {is_correct} questions right!")
+    if is_correct == 0:
+        print(f"{is_correct} correct answers were given. You got this, just try again.")
 
 
 def create_math_problems(n):
