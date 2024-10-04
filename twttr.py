@@ -3,16 +3,21 @@
 
 
 def main():
-    vowels = ["a", "e", "i", "o", "u", "A", "E" "I", "O", "U"]
 
     phrase = input("Input: ")
+    print(shorten(phrase))
+
+
+def shorten(word):
+    vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+
     formatted_phrase = ""
-    for char in phrase:
+    for char in word:
         if char in vowels:
             char.replace(char, "")
         else:
             formatted_phrase += char
-    print(formatted_phrase)
+    return formatted_phrase
 
 
 if __name__ == "__main__":
