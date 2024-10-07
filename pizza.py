@@ -20,8 +20,10 @@ def main():
 
         for row in reader:
 
-            lines.append([row[header] for header in headers])
-            print(lines)
+            line = []
+            for header in headers:
+                line.append(row[header])
+            lines.append(line)
 
     print(tabulate(lines, headers="firstrow", tablefmt="grid"))
 
