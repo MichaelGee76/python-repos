@@ -1,9 +1,8 @@
 id,task,prio,done
-1,Schuhe putzen,3,False
-2,Schlawiner fangen,3,False
-3,Scharmützel veranstalten,1,False
-1,Sachen machen,2,False
-2,Andere Sachen machen,3,False
-3,Ganz andere Sachen machen,1,False
-4,Spazieren gehen,2,False
-1,Zähne putzen,1,False
+1,fisher,1,False
+2,salmon,2,False
+3,sex,3,False
+4,loch,2,False
+5,windel,1,False
+6,wald,2,False
+7,Finde den Fehler,1,True

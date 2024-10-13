@@ -1,16 +1,8 @@
-# import csv
-# import operator
-# import os.path
-# import keyboard
-# import threading
-# from tabulate import tabulate
-# from termcolor import colored, COLORS
 from helpers import *
 
 
 def main():
     is_on = True
-    # print(COLORS)
     print("\nWillkommen zu TODO\n")
     while is_on:
 
@@ -23,12 +15,14 @@ def main():
         except ValueError:
             continue
         if usr_answer == 5:
-            print("Bis bald")
+            end_programm()
             break
         if usr_answer == 1:
             create_task()
         if usr_answer == 2:
             show_usr_list()
+        if usr_answer == 3:
+            mark_task_as_done()
         if usr_answer == 4:
             delete_list()
 
